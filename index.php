@@ -24,7 +24,7 @@ $result = $app ->getAllHandler();
  <table width='80%' border=1  >
 
  <tr>
-     <th>id</th> <th>task</th><th>Selesai/belum</th> <th>tanggal dibuat</th> <th>Tanggal selesai</th> <th>Update</th>
+     <th>id</th> <th>task</th><th>Selesai/belum</th> <th>waktu dibuat</th> <th>waktu checked/unchecked</th> <th>Update</th>
  </tr>
  <?php  
  
@@ -37,7 +37,7 @@ $result = $app ->getAllHandler();
      echo "<td>".$user_data['waktu']."</td>";   
      echo "<td>".$user_data['selesai']."</td>";
       
-     echo "<td><a href='edit.php?id=$user_data[id]'>Edit</a> | <a href='delete.php?id=$user_data[id]'>Delete</a> | <a href='centang.php?id=$user_data[id]'>Centang</a></td></tr>  ";        
+     echo "<td><a href='edit.php?id=$user_data[id]'>Edit</a> | <a href='delete.php?id=$user_data[id]'>Delete</a> | <a href='centang.php?id=$user_data[id]'>check/uncheck</a></td></tr>  ";        
  }
  ?>
  </table>

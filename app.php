@@ -62,8 +62,8 @@ class app{
           }
         
     }
-    function checkHandler($id) {
-        $sql = "UPDATE list SET yn= true WHERE id=$id";
+    function checkHandler($id, $isChecked) {
+        $sql = "UPDATE list SET yn= $isChecked WHERE id=$id";
         if ($this->mysqli->query($sql) === TRUE) {
             $sql = "UPDATE list SET selesai= CURRENT_TIMESTAMP WHERE id=$id";
             $this->mysqli->query($sql);
